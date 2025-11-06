@@ -10,12 +10,14 @@ This project was done as a code-along with Mosh (course instructor) + some perso
 A modern RESTful Spring Boot API for a simple web shop.  
 The project demonstrates clean layered architecture, DTO mapping, validations, MySQL persistence, Flyway migrations, and a static homepage that allows users to test the API directly in the browser.
 
+The project is hosted on Render and can be viewed here: https://springboot-web-shop-api.onrender.com
+
 ---
 
 ## Live Demo
 
 **Backend (Render):**  
-
+`https://springboot-web-shop-api.onrender.com`
 
 **Swagger UI:**  
 `/swagger-ui.html`
@@ -132,7 +134,7 @@ This profile expects a database at:
 
 I used the following: 
 
-- **Render** for deploying the Spring Boot backend  
+- **Render** for deploying the Spring Boot backend  https://springboot-web-shop-api.onrender.com
 - **Aiven** for the managed MySQL instance  
 
 
@@ -185,7 +187,7 @@ This replaces the need for Postman for quick demos.
 - springdoc-openapi (Swagger UI)
 
 # License
-
+This project was done as a part of Mosh programming course for Spring boot REST-APIs
 MIT  
 
 
