@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web Shop API • Home</title>
+
+    <!-- Google Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+<!-- Hero / Welcome -->
+<header class="section section--blue section--hero">
+    <div class="container">
+        <nav class="topnav">
+            <div class="brand">Web Shop API</div>
+            <div class="nav-actions">
+                <a class="btn btn--ghost" href="/swagger-ui.html">Swagger UI</a>
+                <a class="btn btn--ghost" href="https://github.com/Mimox98" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn btn--ghost" href="https://www.linkedin.com/in/mohamed-farag-45b361209/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <h1>Welcome to my Web Shop API</h1>
+            <p class="lead">
+                Explore and test the core resources: <strong>Category</strong>, <strong>User</strong>, and <strong>Product</strong>.
+                All endpoints are plain REST with JSON.
+            </p>
+            <div class="hero-cta">
+                <button class="btn btn--light" data-try="/categories">Try: GET /categories</button>
+                <button class="btn btn--light" data-try="/users">Try: GET /users</button>
+                <button class="btn btn--light" data-try="/products">Try: GET /products</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Resource Overview -->
+<section class="section section--grey">
+    <div class="container">
+        <h2>Resources & CRUD</h2>
+        <p class="muted">Each controller exposes Create, Read, Update, and Delete operations.</p>
+
+        <div class="cards">
+            <!-- Category -->
+            <article class="card">
+                <div class="card-head">
+                    <h3>Category</h3>
+                    <span class="chip">CRUD</span>
+                </div>
+                <ul class="endpoint-list">
+                    <li><code>GET /categories</code> — list categories</li>
+                    <li><code>POST /categories</code> — create category</li>
+                    <li><code>GET /categories/{id}</code> — get by id</li>
+                    <li><code>PUT /categories/{id}</code> — update</li>
+                    <li><code>DELETE /categories/{id}</code> — delete</li>
+                </ul>
+                <div class="card-actions">
+                    <button class="btn btn--primary" data-try="/categories">Try GET /categories</button>
+                </div>
+            </article>
+
+            <!-- User -->
+            <article class="card">
+                <div class="card-head">
+                    <h3>User</h3>
+                    <span class="chip">CRUD</span>
+                </div>
+                <ul class="endpoint-list">
+                    <li><code>GET /users</code> — list users</li>
+                    <li><code>POST /users</code> — create user</li>
+                    <li><code>GET /users/{id}</code> — get by id</li>
+                    <li><code>PUT /users/{id}</code> — update</li>
+                    <li><code>DELETE /users/{id}</code> — delete</li>
+                </ul>
+                <div class="card-actions">
+                    <button class="btn btn--primary" data-try="/users">Try GET /users</button>
+                </div>
+            </article>
+
+            <!-- Product -->
+            <article class="card">
+                <div class="card-head">
+                    <h3>Product</h3>
+                    <span class="chip">CRUD</span>
+                </div>
+                <p class="note">Before creating a product, make sure there is at least <strong>one Category</strong> in the system.</p>
+                <ul class="endpoint-list">
+                    <li><code>GET /products</code> — list products</li>
+                    <li><code>POST /products</code> — create product <em>(requires category)</em></li>
+                    <li><code>GET /products/{id}</code> — get by id</li>
+                    <li><code>PUT /products/{id}</code> — update</li>
+                    <li><code>DELETE /products/{id}</code> — delete</li>
+                </ul>
+                <div class="card-actions">
+                    <button class="btn btn--primary" data-try="/products">Try GET /products</button>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Test Panel -->
+<section id="console" class="section section--blue">
+    <div class="container">
+        <h2>Quick Test Console</h2>
+        <p class="muted">Run a simple GET to see live JSON from your API.</p>
+
+        <div class="console">
+            <div class="console-row">
+                <label for="pathInput">Path</label>
+                <input id="pathInput" type="text" placeholder="/users?page=0&size=5" />
+                <button id="runBtn" class="btn btn--light">Run</button>
+            </div>
+            <pre id="output" class="output" aria-live="polite">Click a “Try” button or run any GET path…</pre>
+        </div>
+    </div>
+</section>
+
+<!-- Swagger -->
+<section class="section section--grey">
+    <div class="container">
+        <h2>Swagger / OpenAPI</h2>
+        <p class="muted">
+            Prefer a full, interactive spec? Open Swagger UI to explore models, parameters, and responses.
+        </p>
+        <a class="btn btn--primary btn--lg" href="/swagger-ui.html">Open Swagger UI</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container footer-grid">
+        <div>© <span id="year"></span> Web Shop API</div>
+        <div class="footer-links">
+            <a href="/swagger-ui.html">Swagger</a>
+            <a href="https://github.com/Mimox98" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/mohamed-farag-45b361209/" target="_blank" rel="noopener">LinkedIn</a>
+
+        </div>
+    </div>
+</footer>
+
+<script src="/assets/app.js"></script>
+</body>
+</html>

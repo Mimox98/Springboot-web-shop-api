@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: store
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://store-api-storeapi.e.aivencloud.com:22104/defaultdb?sslMode=REQUIRED&serverTimezone=UTC&enabledTLSProtocols=TLSv1.2
+    username: ${DB_USER:avnadmin}
+    password: ${DB_PASSWORD:changeme}
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
+
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+
+  flyway:
+    enabled: true
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/store_api?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: root
+    password: Memo2022#
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
