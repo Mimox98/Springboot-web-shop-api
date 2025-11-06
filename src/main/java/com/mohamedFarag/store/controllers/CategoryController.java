@@ -6,6 +6,7 @@ import com.mohamedFarag.store.repositories.CategoryRepository;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -19,6 +20,7 @@ public class CategoryController {
     private CategoryMapper categoryMapper;
 
     @GetMapping
+    @Transactional(readOnly = true)
     public List<CategoryDto> getAllCategories() {
         return categoryRepository.findAll().stream().map(categoryMapper::categoryToCategoryDto).toList();
     }
